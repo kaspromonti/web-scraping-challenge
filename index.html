@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Information</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Click here for the lastest info on Mars!</a></p>
+    </div>
+  </div>
+
+<!-- LATEST NEWS-->
+<div class="container">
+  <div class="row" align="center">
+    <div class="col-md-12">
+      <h2 class="heading">Latest Mars News</h2>
+      <br>
+      <p> {{ mars.News }} </p>
+    </div>
+  </div>
+</div>
+<br>
+
+<!-- FEATURED IMAGE-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" align="center">
+      <h2 class="heading">Featured Image</h2>
+      <img src={{ mars.Featured_URL }} style="max-width: 100%; height: 400px;>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" align="center">
+      <h3 class="heading">Facts About Mars</h3>
+        {{ mars.Mars_facts | safe }}
+    </div 
+  </div>
+
+</div>
+
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" align="center">
+        <h3 class="heading">Hemisphere Images</h3>
+<!--         <ul style="list-style: none;">
+        
+        {% for x in Hemispheres_Images %}
+          
+          <li>{{ mars.Title }} <br>
+          {{ mars.ImageURL }}</li>
+
+        {% endfor %}
+        </ul> -->
+
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+
+</html>
